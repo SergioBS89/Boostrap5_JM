@@ -15,7 +15,7 @@
     <br>
     <div class="container">
         <h3>Breakpoints</h3>
-        <img src="assets/img/breakpoints.png" alt="" style="margin-bottom: 60px;">
+        <img class="img-fluid" src="assets/img/breakpoints.png" alt="" style="margin-bottom: 60px;">
         <h3>Grid column system</h3>
         <p>As you can see in this first example, if the property col has not any value,
             automatically the space is divided according to the number of columns there are.
@@ -265,7 +265,461 @@
             </div>
         </div>
     </div>
-    <h3>Column breaks </h3> https://getbootstrap.com/docs/5.3/layout/columns/#column-breaks
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <h3>Column breaks </h3>
+        <p>It allows to jump to next line adding w-100(it means 100 width)</p>
+        <div class="row text-center border border-dark">
+            <div class="border border-success col-6 col-sm-3">Column</div>
+            <div class="border border-success col-6 col-sm-3">Column</div>
+
+            <!--Force next columns to break to new line -->
+            <div class="w-100"></div>
+
+            <div class="border border-success col">Column</div>
+            <div class="border border-success col">Column</div>
+            <div class="border border-success col-2">Column</div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <p>In this example only jumps to next line from .md up</p>
+        <div class="row text-center">
+            <div class="border border-success col-6 col-sm-4">.col-6 .col-sm-4</div>
+            <div class="border border-success col-6 col-sm-4">.col-6 .col-sm-4</div>
+
+            <!--Force next columns to break to new line at md breakpoint and up -->
+            <div class="w-100 d-none d-md-block"></div>
+
+            <div class="border border-success col-6 col-sm-4">.col-6</div>
+            <div class="border border-success col-6 col-sm-4">.col-6</div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+        <h3>Reordering</h3>
+        <p>We can indicate which column will be on top, in the middle and the end applying responsive design</p>
+        <div class="row text-center">
+            <div class="border border-info col-sm-4">
+                First in DOM, no order applied
+            </div>
+            <div class="border border-info col-sm-4 order-2">
+                Third in DOM, with an order of 2
+            </div>
+            <div class="border border-info col-sm-4 order-1">
+                Second in DOM, with an order of 1
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+        <h3>Images and texts</h3>
+        <div class="clearfix">
+            <!-- mb-3(margin bottom / ms-md-3 margin-start 3 from sm) -->
+            <img src="assets/img/logo.png" class="col-sm-6 float-sm-end mb-3 ms-sm-3 img-thumbnail" alt="...">
+
+            <p>
+                A paragraph of placeholder text. We're using it here to show the use of the clearfix class. We're
+                adding quite a few meaningless phrases here to demonstrate how the columns interact here with the
+                floated image.
+            </p>
+
+            <p>
+                As you can see the paragraphs gracefully wrap around the floated image. Now imagine how this would
+                look with some actual content in here, rather than just this boring placeholder text that goes on
+                and on, but actually conveys no tangible information at. It simply takes up space and should not
+                really be read.
+            </p>
+
+            <p>
+                And yet, here you are, still persevering in reading this placeholder text, hoping for some more
+                insights, or some hidden easter egg of content. A joke, perhaps. Unfortunately, there's none of that
+                here.
+                And yet, here you are, still persevering in reading this placeholder text, hoping for some more
+                insights, or some hidden easter egg of content. A joke, perhaps. Unfortunately, there's none of that
+                here.
+                And yet, here you are, still persevering in reading this placeholder text, hoping for some more
+                insights, or some hidden easter egg of content. A joke, perhaps. Unfortunately, there's none of that
+                here.
+                And yet, here you are, still persevering in reading this placeholder text, hoping for some more
+                insights, or some hidden easter egg of content. A joke, perhaps. Unfortunately, there's none of that
+                here.
+            </p>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <h3>Typography</h3>
+        <p>Same labels as HTML</p>
+        <br>
+        <h1>H1 title</h1>
+        <h2>H2 title</h2>
+        <h3>H3 title</h3>
+        <h4>H4 title</h4>
+        <h5>H5 title</h5>
+        <h6>H6 title</h6>
+        <br>
+        <p><u>Customazing headings</u></p>
+        <h5>
+            Fancy learning bootstrap!
+            <small class="text-body-secondary">with christmas coming!</small>
+        </h5>
+        <br>
+        <p><u>Display Headings</u></p>
+        <h1 class="display-1">Display 1</h1>
+        <h1 class="display-2">Display 2</h1>
+        <h1 class="display-3">Display 3</h1>
+        <h1 class="display-4">Display 4</h1>
+        <h1 class="display-5">Display 5</h1>
+        <h1 class="display-6">Display 6</h1>
+        <br>
+        <p><u>Naming a source</u></p>
+        <figure>
+            <blockquote class="blockquote">
+                <p>A well-known quote, contained in a blockquote element.</p>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+                A great dev called <cite title="Source Title">Sergio Berdiell</cite>
+            </figcaption>
+        </figure>
+        <br>
+        <p><u>Alignment</u></p>
+        <p>Text center</p>
+        <figure class="text-center">
+            <blockquote class="blockquote">
+                <p>A well-known quote, contained in a blockquote element.</p>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+                Someone famous in <cite title="Source Title">Source Title</cite>
+            </figcaption>
+        </figure>
+        <br>
+        <p>Text end</p>
+        <figure class="text-end">
+            <blockquote class="blockquote">
+                <p>A well-known quote, contained in a blockquote element.</p>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+                Someone famous in <cite title="Source Title">Source Title</cite>
+            </figcaption>
+        </figure>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+        <h3>Images</h3>
+        <p>Image responsive with img-fluid</p>
+        <img src="assets/img/bootstrap.png" class="img-fluid" alt="...">
+        <br>
+        <br>
+        <p>Image thumbnails</p>
+        <img style="width: 300px; height: 200px;" src="assets/img/pro.jpg" class="img-thumbnail" alt="...">
+        <br>
+        <br>
+        Aligning images
+        <br>
+        <br>
+        <img style="width: 300px; height: 200px;" src="assets/img/programming.jpeg" class="rounded float-start"
+            alt="...">
+        <img style="width: 300px; height: 200px;" src="assets/img/programming.jpeg" class="rounded float-end" alt="...">
+        <img style="width: 300px; height: 200px;" src="assets/img/programming.jpeg" class="mx-auto d-block pt-3"
+            alt="...">
+    </div>
+    <br>
+    <br>
+    <div class="container">
+        <h3>Accordion</h3>
+        <p>We can display or hide some text below a label with class <code>.accordion</code></p>
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Accordion 1
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>This is the first item's accordion body.</strong> It is shown by default, until the
+                        collapse plugin adds the appropriate classes that we use to style each element. These classes
+                        control the overall appearance, as well as the showing and hiding via CSS transitions. You can
+                        modify any of this with custom CSS or overriding our default variables. It's also worth noting
+                        that just about any HTML can go within the <code>.accordion-body</code>, though the transition
+                        does limit overflow.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Accordion 2
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>This is the second item's accordion body.</strong> It is hidden by default, until
+                        the collapse plugin adds the appropriate classes that we use to style each element. These
+                        classes control the overall appearance, as well as the showing and hiding via CSS
+                        transitions. You can modify any of this with custom CSS or overriding our default variables.
+                        It's also worth noting that just about any HTML can go within the
+                        <code>.accordion-body</code>, though the transition does limit overflow.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+        <p>We also have the class <code>.accordion-flush</code> to remove rounded corners on the label</p>
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        Accordion Flux 1
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                        demonstrate the <code>.accordion-flush</code>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        Accordion Flux 2
+                    </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate
+                        the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine
+                        this being filled with some actual content.</div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="container">
+            <p>Always open omitting the data-bs-parent attribute on each <code>.accordion-collapse</code></p>
+            <div class="accordion" id="accordionPanelsStayOpenExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                            aria-controls="panelsStayOpen-collapseOne">
+                            Accordion non collapse 1
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                        <div class="accordion-body">
+                            <strong>This is the first item's accordion body.</strong> It is shown by default, until the
+                            collapse plugin adds the appropriate classes that we use to style each element. These
+                            classes control the overall appearance, as well as the showing and hiding via CSS
+                            transitions. You can modify any of this with custom CSS or overriding our default variables.
+                            It's also worth noting that just about any HTML can go within the
+                            <code>.accordion-body</code>, though the transition does limit overflow.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseTwo">
+                            Accordion non collapse 2
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <strong>This is the second item's accordion body.</strong> It is hidden by default, until
+                            the collapse plugin adds the appropriate classes that we use to style each element. These
+                            classes control the overall appearance, as well as the showing and hiding via CSS
+                            transitions. You can modify any of this with custom CSS or overriding our default variables.
+                            It's also worth noting that just about any HTML can go within the
+                            <code>.accordion-body</code>, though the transition does limit overflow.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="container">
+            <h3>Alerts</h3>
+            <p>Some examples of alerts</p>
+            <div class="alert alert-primary" role="alert">
+                A simple primary alert—check it out!
+            </div>
+            <div class="alert alert-secondary" role="alert">
+                A simple secondary alert—check it out!
+            </div>
+            <div class="alert alert-success" role="alert">
+                A simple success alert—check it out!
+            </div>
+            <div class="alert alert-danger" role="alert">
+                A simple danger alert—check it out!
+            </div>
+            <div class="alert alert-warning" role="alert">
+                A simple warning alert—check it out!
+            </div>
+            <div class="alert alert-info" role="alert">
+                A simple info alert—check it out!
+            </div>
+            <div class="alert alert-light" role="alert">
+                A simple light alert—check it out!
+            </div>
+            <div class="alert alert-dark" role="alert">
+                A simple dark alert—check it out!
+            </div>
+        </div>
+        <br>
+        <br>
+        <p>Link Colors in alert</p>
+        <div class="alert alert-primary" role="alert">
+            A simple primary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+        </div>
+        <div class="alert alert-secondary" role="alert">
+            A simple secondary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you
+            like.
+        </div>
+        <div class="alert alert-success" role="alert">
+            A simple success alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+        </div>
+        <div class="alert alert-danger" role="alert">
+            A simple danger alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+        </div>
+        <div class="alert alert-warning" role="alert">
+            A simple warning alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+        </div>
+        <div class="alert alert-info" role="alert">
+            A simple info alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+        </div>
+        <div class="alert alert-light" role="alert">
+            A simple light alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+        </div>
+        <div class="alert alert-dark" role="alert">
+            A simple dark alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+        </div>
+        <br>
+        <br>
+        <p>Alerts can be customazed</p>
+        <div class="alert alert-success" role="alert">
+            <h4 class="alert-heading">Well done!</h4>
+            <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit
+                longer so that you can see how spacing within an alert works with this kind of content.</p>
+            <hr>
+            <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+        <h3>Buttons</h3>
+        <p>List some buttons</p>
+        <button type="button" class="btn btn-primary">Primary</button>
+        <button type="button" class="btn btn-secondary">Secondary</button>
+        <button type="button" class="btn btn-success">Success</button>
+        <button type="button" class="btn btn-danger">Danger</button>
+        <button type="button" class="btn btn-warning">Warning</button>
+        <button type="button" class="btn btn-info">Info</button>
+        <button type="button" class="btn btn-light">Light</button>
+        <button type="button" class="btn btn-dark">Dark</button>
+        <button type="button" class="btn btn-link">Link</button>
+        <br>
+        <br>
+        <button type="button" class="btn btn-outline-primary">Primary</button>
+        <button type="button" class="btn btn-outline-secondary">Secondary</button>
+        <button type="button" class="btn btn-outline-success">Success</button>
+        <button type="button" class="btn btn-outline-danger">Danger</button>
+        <button type="button" class="btn btn-outline-warning">Warning</button>
+        <button type="button" class="btn btn-outline-info">Info</button>
+        <button type="button" class="btn btn-outline-light">Light</button>
+        <button type="button" class="btn btn-outline-dark">Dark</button>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <h3>Badges</h3>
+        <p>Headings</p>
+        <h1>Example heading <span class="badge bg-secondary">New</span></h1>
+        <h2>Example heading <span class="badge bg-secondary">New</span></h2>
+        <h3>Example heading <span class="badge bg-secondary">New</span></h3>
+        <h4>Example heading <span class="badge bg-secondary">New</span></h4>
+        <h5>Example heading <span class="badge bg-secondary">New</span></h5>
+        <h6>Example heading <span class="badge bg-secondary">New</span></h6>
+        <br>
+        <p>Badges can be used in buttons to provide a counter</p>
+        <button type="button" class="btn btn-primary">
+            Notifications <span class="badge text-bg-secondary">4</span>
+        </button>
+        <br>
+        <br>
+        <p>Even we can custom our buttons</p>
+        <button type="button" class="btn btn-primary position-relative">
+            Inbox
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                99+
+                <span class="visually-hidden">unread messages</span>
+            </span>
+        </button>
+        <br>
+        <br>
+        <p>Pill badges</p>
+        <span class="badge rounded-pill text-bg-primary">Primary</span>
+        <span class="badge rounded-pill text-bg-secondary">Secondary</span>
+        <span class="badge rounded-pill text-bg-success">Success</span>
+        <span class="badge rounded-pill text-bg-danger">Danger</span>
+        <span class="badge rounded-pill text-bg-warning">Warning</span>
+        <span class="badge rounded-pill text-bg-info">Info</span>
+        <span class="badge rounded-pill text-bg-light">Light</span>
+        <span class="badge rounded-pill text-bg-dark">Dark</span>
+        <br>
+        <br>
+        <p>Creating my own button</p>
+        <button type="button" class="btn btn-success position-relative">
+            Made by Sergio
+            <span class="position-absolute top-100 start-100 translate-middle badge rounded-pill text-bg-dark">
+                +99
+            </span>
+        </button>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
     <br>
     <br>
     <br>
